@@ -9,12 +9,14 @@
 <body>
   <%= form_with model: @user do |form| %>
     <%= label(:user, :email, "Email please:") %>
-    <%= form.text_field :email, placeholder: "lol@aol.com" %>
+    <%= form.text_field :email%>
     <%= form.label :username, "Username here:" %>
-    <%= text_field(:user, :username, value: "Bert") %>
+    <%= text_field(:user, :username) %>
     <%= form.label :password, "Password:" %>
     <%= form.password_field :password %>
     <%= form.submit %>
   <% end %>
+
+  <%= render partial: "user_errors" %>
 </body>
 </html>
